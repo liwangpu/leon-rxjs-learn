@@ -1,20 +1,29 @@
-class Subscriber {
+const moment = require('moment');
 
-    constructor(name) {
-        this.name = name;
-    }
-
-    next(msg) {
-        console.log(`${this.name} get message:`, msg);
-    }
-
-    error(err) {
-        console.log(`${this.name} get error:`, err);
-    }
-
-    complete() {
-        console.log(`${this.name} complete subscription!`);
-    }
+function subscriber(name) {
+    return {
+        next: msg => logMessage(msg, 'next', name),
+        error: err => logMessage(err, 'error', name),
+        complete: () => logMessage('', 'complete', name)
+    };
 }
 
-exports.Subscriber = Subscriber;
+function logMessage(msg, attr1, attr2) {
+    msg = msg || '';
+    if (attr2) {
+        msg = `[${attr2}] ${msg}`;
+    }
+    if (attr1) {
+        if (attr2) {
+            msg = `[${attr1}]${msg}`;
+        } else {
+            msg = `[${attr1}] ${msg}`;
+        }
+
+    }
+    msg = `${msg}  ${moment().format('mm:ss')}`;
+    console.log(msg);
+}
+
+exports.subscriber = subscriber;
+exports.logMessage = logMessage;

@@ -1,26 +1,27 @@
 {
-  "name": "leon-rxjs-learn",
-  "version": "1.0.0",
-  "description": "for learning",
-  "main": "main.js",
-  "scripts": {
-    "start": "nodemon src/main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/liwangpu/leon-rxjs-learn.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liwangpu/leon-rxjs-learn/issues"
-  },
-  "homepage": "https://github.com/liwangpu/leon-rxjs-learn#readme",
-  "dependencies": {
-    "rxjs": "^6.5.4"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+    "name": "leon-rxjs-learn",
+    "version": "1.0.0",
+    "description": "for learning",
+    "main": "main.js",
+    "scripts": {
+        "test": "nodemon src/main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/liwangpu/leon-rxjs-learn.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/liwangpu/leon-rxjs-learn/issues"
+    },
+    "homepage": "https://github.com/liwangpu/leon-rxjs-learn#readme",
+    "dependencies": {
+        "rxjs": "^6.5.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2",
+        "moment": "^2.24.0"
+    }
 }
